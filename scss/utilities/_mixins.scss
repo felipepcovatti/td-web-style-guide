@@ -1,0 +1,42 @@
+@mixin e($element) {
+	&__#{$element} {
+		@content;
+	}
+}
+@mixin m($modifier) {
+	&--#{$modifier} {
+		@content;
+	}
+}
+
+@mixin media($width) {
+	@media (min-width: $width) {
+		@content;
+	}
+}
+
+
+@mixin flexbox($dr: row, $wp: wrap, $jc: center) {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: $dr;
+  flex-wrap: $wp;
+	justify-content: center;
+}
+
+
+@mixin custom-width-center($size) {
+  margin-left: auto;
+  margin-right: auto;
+  width: $size;
+}
+
+@mixin after-headline($space) {
+		[class^='headline'] + & {
+			margin-top: $space;
+			@content;
+		}
+}

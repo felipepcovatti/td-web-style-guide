@@ -1,0 +1,72 @@
+.container {
+  padding-top: 38px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  @include media($desktop) {
+    padding-left: 0;
+    padding-right: 0;
+    width: 95%;
+    max-width: $max-row-width;
+  }
+}
+
+.grid {
+  @include e(row) {
+    @include flexbox();
+    margin-left: -15px;
+    margin-right: -15px;
+    @include media($desktop) {
+      justify-content: space-between;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  @include e(col) {
+    @for $i from 1 through 12 {
+      @include m($i) {
+        flex-basis: 100%;
+        min-height: $min-height;
+        border-radius: $b-radius;
+        margin-left: 15px;
+        margin-right: 15px;
+        padding: 12px;
+        margin-bottom: 0.35em;
+
+        &:last-child {
+          margin-bottom: 3.1em;
+        }
+        @include media($desktop) {
+          flex-basis: auto;
+          width: col-width-calc($max-gutter-width, $max-row-width, $i);
+          margin-left: 0;
+          margin-right: 0;
+          margin-bottom: 3.1em;
+
+          &.centered {
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+
+        &.theme__colors {
+          background-color: nth($column-colors, $i);
+          font-weight: $bold;
+          @include media($desktop) {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+.card {
+  @extend %m-card;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.form {
+  @extend %m-card;
+}

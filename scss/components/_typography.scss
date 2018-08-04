@@ -1,0 +1,49 @@
+@if variable-exists(google-font-url) {
+  @import url($google-font-url);
+}
+
+.container {
+  font-family: $primaryFont;
+  color: $primary-color;
+  font-weight: $regular;
+}
+
+.headline {
+  @include m(primary) {
+    font-size: 1.9em;
+    margin-bottom: 1.2em;
+    font-weight: $black;
+    color: $highlight-color;
+    padding-left: 0.75em;
+    letter-spacing: 0.2px;
+    @include after-headline(-.8em);
+  }
+  @include m(secondary) {
+    font-size: 1.1em;
+    font-weight: $light;
+    margin-bottom: 2.5em;
+    padding-left: 0.5em;
+    @include media($desktop) {
+      padding-left: 0;
+    }
+  }
+}
+
+.link {
+  @extend %link-dft;
+}
+
+
+.blockquote {
+
+  padding-left: 6%;
+  font-size: 1.65em;
+  line-height: 1.25;
+  font-weight: $regular;
+  font-style: italic;
+  margin: 1em 1em 0.82em;
+  letter-spacing: -1px;
+  border-left: 8px solid $highlight-color;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}

@@ -1,0 +1,39 @@
+body {
+  background-image:url('../mockups/mobile480px_mockup.png');
+
+
+  @media (min-width: 768px) {
+      background-image:url('../mockups/desktop1400px_mockup.png');
+  }
+
+  // min-height: 4400px;
+  background-repeat: no-repeat;
+  // max-width: 480px;
+  background-position: top center;
+}
+
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-start: 0;
+
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  font-size: 17px;
+  line-height: 1.6;
+  margin-bottom: .75em;
+  letter-spacing: .2px;
+}

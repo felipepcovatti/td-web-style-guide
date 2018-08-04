@@ -1,0 +1,11 @@
+
+@function col-width-calc($max-gutter-width, $max-row-width, $i) {
+    $r: $max-row-width;
+    $g: $max-gutter-width;
+    // expression bellow simplified with: https://www.symbolab.com/solver/simplify-calculator
+    // original: (((($r - ($g * 11))/12) * $i) + (($i - 1) * $g)) / $r
+    @return percentage(
+      (($i * $r) + ($i * $g) - (12 * $g))/ (12 * $r)
+    )
+
+}

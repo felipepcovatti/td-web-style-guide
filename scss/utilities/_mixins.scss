@@ -8,35 +8,32 @@
 		@content;
 	}
 }
-
 @mixin media($width) {
 	@media (min-width: $width) {
 		@content;
 	}
 }
-
-
-@mixin flexbox($dr: row, $wp: wrap, $jc: center) {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: $dr;
-  flex-wrap: $wp;
-	justify-content: center;
+@mixin flexbox($dr: row, $wp: wrap, $jc: space-between) {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: $dr;
+	flex-wrap: $wp;
+	justify-content: $jc;
 }
-
-
-@mixin custom-width-center($size) {
-  margin-left: auto;
-  margin-right: auto;
-  width: $size;
-}
-
 @mixin after-headline($space) {
-		[class^='headline'] + & {
-			margin-top: $space;
-			@content;
-		}
+	[class^='headline'] + & {
+		margin-top: $space;
+		@content;
+	}
+}
+@mixin p-r-l($r, $l: $r) {
+	padding-right: $r;
+	padding-left: $l;
+}
+@mixin m-r-l($r, $l: $r) {
+	margin-right: $r;
+	margin-left: $l;
 }

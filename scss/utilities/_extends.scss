@@ -1,56 +1,31 @@
-%center {
-  margin: auto;
-  display: block;
-}
-
-%m-card {
-  margin-top: 1.6em;
-  margin-bottom: .5em;
-  @include media($desktop) {
-    // @include custom-width-center($medium-width-center);
-    margin-top: .9em;
-    // margin-bottom: 1.3em;
-
+%link-dft {
+  font-weight: $bold;
+  text-decoration: none;
+  color: $highlight-color;
+  &:hover {
+    color: hover-color($highlight-color);
   }
-}
-
-%img-box {
-  border: 1px solid $light-primary-color;
-  padding: 10px;
 }
 
 %img-dft {
-  margin-left: auto;
-  margin-right: auto;
+  display: block;
   max-width: 100%;
-  display: block;
+  @include m-r-l(auto);
 }
 
-
-%link-dft {
-  color: $highlight-color;
-  font-weight: $bold;
-  text-decoration: none;
+%img-box {
+  padding: 10px;
+  border: 1px solid $light-primary-color;
 }
 
-%btn {
-  display: block;
-  transition: background-color 0.15s;
-  max-width: $max-btn-width;
-  padding: 15px;
-  border-radius: $b-radius;
-  border: none;
-  cursor: pointer;
-  &:not(:last-child) {
-    margin-bottom: 21px;
-  }
-  @include custom-width-center($medium-width-center);
+%m-t-b-card {
+  margin-top: 1.6em;
+  margin-bottom: 0.5em;
   @include media($desktop) {
-    width: auto;
-    display: inline;
-    padding-left: 55px;
-    padding-right: 55px;
-    margin-left: 23px;
-    margin-right: 23px;
+    margin-top: 0.9em;
   }
+}
+
+%color-transitions {
+  transition: background-color 0.15s, color 0.15s, border-color 0.15s;
 }

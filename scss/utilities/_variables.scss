@@ -1,61 +1,31 @@
+// Sizes
 $desktop: 768px;
-
-
-$google-font-url: 'https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,900';
-$primaryFont: 'Lato', sans-serif;
-
-
-
-$highlight-color: #58e1c1;
-$primary-color: #454545;
-$strong-primary-color: darken($primary-color, 5%);
-$light-primary-color: lighten($primary-color, 40%);
-
-
 $max-btn-width: 410px;
 $max-input-width: 375.5px;
-$max-btn-width-desk: 200px;
-
-$min-height: 44px;
-
+$max-gutter-width: 13px;
+$max-row-width: 1127px;
+$min-col-height: 44px;
+$pg-sides-space: 15px;
 $b-radius: 5px;
 
-
+// Typography
+$google-font-url: 'https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,900';
+$primaryFont: 'Lato', sans-serif;
 $light: 300;
 $regular: 400;
 $bold: 700;
 $black: 900;
 
-// grid
-$grid-separator: 3em;
-
-$page-sides-space: 15px;
-
-$small-width-center: 87%;
-$medium-width-center: 93.5%;
-
-
-$max-gutter-width: 13px;  //configurable
-$max-row-width: 1127px; //configurable
-
-
+// Colors
+$highlight-color: #58e1c1;
+$primary-color: #454545;
+$strong-primary-color: darken($primary-color, 5%);
+$light-primary-color: lighten($primary-color, 40%);
 $theme-type-colors: (
-    default: #51ddfc,
-    success: #63cc82,
-    error: #e4757a,
-    warning: #fd7856,
-    info: #927bc1,
+  default: #51ddfc,
+  success: #63cc82,
+  error: #e4757a,
+  warning: #fd7856,
+  info: #927bc1,
 );
-
-$column-colors: #2b57f5,
-                #297360,
-                #deb2ee,
-                #7ee6fd,
-                #88d9a0,
-                #3fabca,
-                #ec9fa3,
-                #fd9f85,
-                #f51496,
-                #00ff38,
-                #728500,
-                #80e8d1;
+$column-colors: #2b57f5, #297360, #deb2ee, #7ee6fd, #88d9a0, #3fabca, #ec9fa3, #fd9f85, #f51496, #00ff38, #728500, #80e8d1;
